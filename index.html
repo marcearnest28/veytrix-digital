@@ -1,0 +1,1593 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Veytrix Digital provides custom website design, Android app development, and digital business tools for businesses in Liberty County, Bristol, Blountstown, Tallahassee, and surrounding Florida communities." />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="Marc Earnest, Veytrix Digital" />
+  <meta name="geo.region" content="US-FL" />
+  <meta name="geo.placename" content="Liberty County, Florida" />
+  <link rel="canonical" href="https://veytrixdigital.com/" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Veytrix Digital | Websites & Android Apps in Liberty County, FL" />
+  <meta property="og:description" content="Custom website design, Android app development, and practical digital tools for local businesses in Liberty County and surrounding North Florida communities." />
+  <meta property="og:url" content="https://veytrixdigital.com/" />
+  <meta property="og:site_name" content="Veytrix Digital" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <title>Veytrix Digital | Website Design & Android App Development in Liberty County, FL</title>
+  <link rel="icon" href="logo-mark.png" type="image/png" />
+  <style>
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --bg: #080b12;
+  --bg-soft: #0f1420;
+  --panel: #131a28;
+  --panel-light: #182235;
+  --text: #f4f7fb;
+  --muted: #9ba9bd;
+  --accent: #56e0ff;
+  --accent-2: #7d6cff;
+  --border: rgba(255, 255, 255, 0.09);
+  --shadow: 0 24px 70px rgba(0, 0, 0, 0.35);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background:
+    radial-gradient(circle at top right, rgba(86, 224, 255, 0.08), transparent 28%),
+    var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+.container {
+  width: min(1120px, calc(100% - 40px));
+  margin: 0 auto;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  backdrop-filter: blur(16px);
+  background: rgba(8, 11, 18, 0.82);
+  border-bottom: 1px solid var(--border);
+}
+
+.nav-wrap {
+  min-height: 74px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.logo {
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  font-size: 0.95rem;
+}
+
+.logo span {
+  color: var(--accent);
+  margin-left: 5px;
+}
+
+.main-nav {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+
+.main-nav a {
+  color: #cbd5e4;
+  font-size: 0.95rem;
+}
+
+.main-nav a:hover {
+  color: var(--text);
+}
+
+.nav-cta {
+  border: 1px solid rgba(86, 224, 255, 0.45);
+  padding: 9px 15px;
+  border-radius: 999px;
+}
+
+.menu-button {
+  display: none;
+  border: 0;
+  background: transparent;
+  color: var(--text);
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+
+.hero {
+  min-height: calc(100vh - 74px);
+  display: flex;
+  align-items: center;
+  padding: 90px 0;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 70px;
+  align-items: center;
+}
+
+.eyebrow {
+  color: var(--accent);
+  letter-spacing: 0.16em;
+  font-weight: 800;
+  font-size: 0.78rem;
+  margin: 0 0 16px;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+h1 {
+  font-size: clamp(3rem, 7vw, 6.2rem);
+  line-height: 0.98;
+  letter-spacing: -0.055em;
+  max-width: 850px;
+  margin-bottom: 28px;
+}
+
+h2 {
+  font-size: clamp(2.2rem, 5vw, 4rem);
+  line-height: 1;
+  letter-spacing: -0.045em;
+  margin-bottom: 22px;
+}
+
+h3 {
+  font-size: 1.35rem;
+}
+
+.hero-copy,
+.section-intro,
+.about-copy,
+.card p,
+.step p,
+.project p,
+.project li,
+.portfolio-note p {
+  color: var(--muted);
+}
+
+.hero-copy {
+  font-size: 1.15rem;
+  max-width: 650px;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin: 34px 0 28px;
+}
+
+.button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 50px;
+  padding: 0 22px;
+  border-radius: 10px;
+  font-weight: 800;
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+
+.primary {
+  background: linear-gradient(135deg, var(--accent), #6fd1ff);
+  color: #031016;
+}
+
+.secondary {
+  border-color: var(--border);
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.full {
+  width: 100%;
+}
+
+.hero-points {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  color: #c3cfdf;
+  font-size: 0.9rem;
+}
+
+.hero-card {
+  background: linear-gradient(145deg, rgba(24, 34, 53, 0.98), rgba(15, 20, 32, 0.98));
+  border: 1px solid var(--border);
+  border-radius: 22px;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.code-top {
+  display: flex;
+  gap: 7px;
+  padding: 16px;
+  border-bottom: 1px solid var(--border);
+}
+
+.code-top span {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.hero-card pre {
+  padding: 34px;
+  margin: 0;
+  overflow: auto;
+  font-size: 0.94rem;
+  line-height: 1.8;
+  color: #c8f8ff;
+}
+
+.status-line {
+  border-top: 1px solid var(--border);
+  padding: 15px 20px;
+  color: var(--muted);
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.status-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #59f59c;
+  box-shadow: 0 0 18px rgba(89, 245, 156, 0.8);
+}
+
+.section {
+  padding: 110px 0;
+}
+
+.alt {
+  background: var(--bg-soft);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.cards {
+  display: grid;
+  gap: 22px;
+  margin-top: 48px;
+}
+
+.cards.three {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.card,
+.step,
+.portfolio-note {
+  border: 1px solid var(--border);
+  background: linear-gradient(145deg, rgba(255,255,255,.035), rgba(255,255,255,.015));
+  border-radius: 18px;
+  padding: 28px;
+}
+
+.card-icon {
+  font-size: 1.8rem;
+  margin-bottom: 28px;
+}
+
+.project {
+  display: grid;
+  grid-template-columns: 1fr 0.75fr;
+  gap: 70px;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.project-label {
+  display: inline-block;
+  color: var(--accent);
+  border: 1px solid rgba(86, 224, 255, 0.3);
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  margin-bottom: 18px;
+}
+
+.project h3 {
+  font-size: 2.6rem;
+  margin-bottom: 15px;
+}
+
+.project ul {
+  padding-left: 20px;
+}
+
+.project-visual {
+  display: flex;
+  justify-content: center;
+}
+
+.phone {
+  width: 240px;
+  height: 470px;
+  border: 8px solid #263147;
+  border-radius: 34px;
+  padding: 10px;
+  background: #020409;
+  box-shadow: var(--shadow);
+}
+
+.phone-screen {
+  height: 100%;
+  border-radius: 21px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background:
+    radial-gradient(circle at top, rgba(86,224,255,.26), transparent 35%),
+    linear-gradient(180deg, #121925, #080b12);
+}
+
+.phone-screen .small {
+  letter-spacing: 0.28em;
+  color: var(--accent);
+  font-size: 0.73rem;
+}
+
+.phone-screen strong {
+  font-size: 3.5rem;
+  line-height: 1;
+}
+
+.phone-screen p {
+  color: var(--muted);
+  margin-top: 18px;
+}
+
+.app-shot {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 16px;
+}
+
+.portfolio-note {
+  margin-top: 45px;
+}
+
+.portfolio-note p {
+  margin-bottom: 0;
+}
+
+.split,
+.contact-grid {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 80px;
+}
+
+.about-copy {
+  font-size: 1.08rem;
+}
+
+.steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  margin-top: 48px;
+}
+
+.step span {
+  display: block;
+  color: var(--accent);
+  font-weight: 900;
+  margin-bottom: 30px;
+}
+
+.contact-form {
+  border: 1px solid var(--border);
+  background: var(--panel);
+  border-radius: 20px;
+  padding: 28px;
+  box-shadow: var(--shadow);
+}
+
+.contact-form label {
+  display: block;
+  font-weight: 700;
+  font-size: 0.9rem;
+  margin-bottom: 17px;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  width: 100%;
+  margin-top: 7px;
+  color: var(--text);
+  background: #0b1019;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 13px 14px;
+  outline: none;
+}
+
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+  border-color: rgba(86, 224, 255, 0.6);
+}
+
+.contact-form select option {
+  color: #111;
+}
+
+.form-message {
+  margin: 14px 0 0;
+  color: var(--accent);
+  min-height: 24px;
+  text-align: center;
+}
+
+footer {
+  padding: 42px 0;
+}
+
+.footer-wrap {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  align-items: flex-end;
+}
+
+.footer-wrap p {
+  margin: 8px 0 0;
+  color: var(--muted);
+  font-size: 0.88rem;
+}
+
+@media (max-width: 850px) {
+  .menu-button {
+    display: block;
+  }
+
+  .main-nav {
+    display: none;
+    position: absolute;
+    top: 74px;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 18px 20px 24px;
+    background: #0b1019;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .main-nav.open {
+    display: flex;
+  }
+
+  .hero-grid,
+  .project,
+  .split,
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 45px;
+  }
+
+  .cards.three,
+  .steps {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .hero {
+    padding-top: 70px;
+  }
+}
+
+@media (max-width: 560px) {
+  .container {
+    width: min(100% - 28px, 1120px);
+  }
+
+  .cards.three,
+  .steps {
+    grid-template-columns: 1fr;
+  }
+
+  .section {
+    padding: 80px 0;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+  }
+
+  .button {
+    width: 100%;
+  }
+
+  .hero-points {
+    flex-direction: column;
+    gap: 7px;
+  }
+
+  .footer-wrap {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+
+/* ===== V3 brand/header/contact enhancements ===== */
+
+.top-contact-bar {
+  border-bottom: 1px solid rgba(255,255,255,.06);
+  background: rgba(3, 7, 14, .9);
+}
+
+.top-contact-inner {
+  min-height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  color: #8fa0b8;
+  font-size: .78rem;
+}
+
+.top-contact-links {
+  display: flex;
+  gap: 18px;
+}
+
+.top-contact-links a:hover {
+  color: var(--accent);
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.brand-mark {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, rgba(86,224,255,.18), rgba(125,108,255,.22));
+  border: 1px solid rgba(86,224,255,.32);
+  color: var(--accent);
+  font-weight: 900;
+  box-shadow: 0 0 28px rgba(86,224,255,.10);
+}
+
+.brand-copy {
+  display: flex;
+  flex-direction: column;
+  line-height: .95;
+  letter-spacing: .12em;
+}
+
+.brand-copy strong {
+  font-size: .98rem;
+}
+
+.brand-copy small {
+  margin-top: 5px;
+  color: var(--accent);
+  font-weight: 800;
+  font-size: .62rem;
+  letter-spacing: .28em;
+}
+
+.site-header {
+  box-shadow: 0 14px 45px rgba(0,0,0,.22);
+}
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.hero .container {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-glow {
+  position: absolute;
+  border-radius: 999px;
+  filter: blur(18px);
+  opacity: .34;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.hero-glow-one {
+  width: 460px;
+  height: 460px;
+  right: -130px;
+  top: 60px;
+  background: radial-gradient(circle, rgba(86,224,255,.42), transparent 68%);
+}
+
+.hero-glow-two {
+  width: 520px;
+  height: 520px;
+  left: -270px;
+  bottom: -210px;
+  background: radial-gradient(circle, rgba(125,108,255,.30), transparent 68%);
+}
+
+.owner-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 8px 12px;
+  margin-bottom: 22px;
+  border: 1px solid rgba(255,255,255,.10);
+  border-radius: 999px;
+  background: rgba(255,255,255,.035);
+  color: #cbd8e8;
+  font-size: .82rem;
+}
+
+.owner-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #59f59c;
+  box-shadow: 0 0 16px rgba(89,245,156,.75);
+}
+
+.gradient-text {
+  background: linear-gradient(90deg, var(--accent), #9f8cff 62%, #d3caff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.hero-card {
+  position: relative;
+  border-color: rgba(86,224,255,.18);
+}
+
+.hero-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(86,224,255,.07), transparent 40%, rgba(125,108,255,.08));
+  pointer-events: none;
+}
+
+.card:nth-child(1) {
+  border-color: rgba(86,224,255,.20);
+}
+
+.card:nth-child(2) {
+  border-color: rgba(125,108,255,.22);
+}
+
+.card:nth-child(3) {
+  border-color: rgba(89,245,156,.16);
+}
+
+.card:hover,
+.step:hover {
+  transform: translateY(-4px);
+  border-color: rgba(86,224,255,.34);
+  transition: transform .2s ease, border-color .2s ease;
+}
+
+.project-visual {
+  position: relative;
+}
+
+.project-visual::before {
+  content: "";
+  position: absolute;
+  width: 330px;
+  height: 330px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(86,224,255,.20), rgba(125,108,255,.08) 46%, transparent 70%);
+  filter: blur(10px);
+}
+
+.phone {
+  position: relative;
+  z-index: 2;
+  width: 280px;
+  height: 560px;
+  border: 7px solid #27364e;
+  background: linear-gradient(145deg, #1c2940, #090d15);
+  box-shadow:
+    0 30px 80px rgba(0,0,0,.48),
+    0 0 0 1px rgba(86,224,255,.13),
+    0 0 55px rgba(86,224,255,.10);
+}
+
+.phone-screen {
+  overflow: hidden;
+}
+
+.app-shot {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  display: block;
+  border-radius: 16px;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: .78fr 1.22fr;
+  gap: 70px;
+  align-items: start;
+}
+
+.about-title {
+  position: sticky;
+  top: 150px;
+}
+
+.about-badge {
+  display: inline-flex;
+  margin-top: 12px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(125,108,255,.25);
+  color: #cfc8ff;
+  background: rgba(125,108,255,.07);
+  font-size: .8rem;
+  font-weight: 700;
+}
+
+.about-card {
+  padding: 34px;
+  border: 1px solid var(--border);
+  border-radius: 22px;
+  background:
+    linear-gradient(145deg, rgba(86,224,255,.045), rgba(125,108,255,.025)),
+    var(--panel);
+  box-shadow: var(--shadow);
+}
+
+.about-card p {
+  color: var(--muted);
+}
+
+.about-card strong {
+  color: var(--text);
+}
+
+.about-lead {
+  color: #dce6f4 !important;
+  font-size: 1.14rem;
+}
+
+.about-values {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-top: 30px;
+}
+
+.about-values div {
+  min-height: 145px;
+  padding: 18px;
+  border: 1px solid rgba(255,255,255,.07);
+  border-radius: 14px;
+  background: rgba(255,255,255,.025);
+}
+
+.about-values span,
+.contact-item small {
+  display: block;
+  color: var(--accent);
+  font-size: .7rem;
+  letter-spacing: .12em;
+  font-weight: 900;
+}
+
+.about-values strong {
+  display: block;
+  margin: 16px 0 4px;
+}
+
+.about-values small {
+  color: var(--muted);
+}
+
+.contact-details {
+  display: grid;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px 17px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: rgba(255,255,255,.025);
+}
+
+.contact-item:hover {
+  border-color: rgba(86,224,255,.35);
+}
+
+.contact-icon {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  flex: 0 0 40px;
+  border-radius: 11px;
+  background: rgba(86,224,255,.08);
+  color: var(--accent);
+}
+
+.contact-item strong {
+  display: block;
+  margin-top: 2px;
+  overflow-wrap: anywhere;
+}
+
+.footer-brand {
+  margin-bottom: 6px;
+}
+
+@media (max-width: 850px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 38px;
+  }
+
+  .about-title {
+    position: static;
+  }
+
+  .about-values {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 650px) {
+  .top-contact-inner {
+    padding: 7px 0;
+    align-items: flex-start;
+  }
+
+  .top-contact-links {
+    flex-direction: column;
+    gap: 2px;
+    text-align: right;
+  }
+
+  .brand-copy strong {
+    font-size: .88rem;
+  }
+
+  .phone {
+    width: 250px;
+    height: 500px;
+  }
+}
+
+
+.service-fieldset {
+  border: 0;
+  padding: 0;
+  margin: 0 0 20px;
+}
+
+.service-fieldset legend {
+  padding: 0;
+  margin-bottom: 10px;
+  font-weight: 700;
+  font-size: .9rem;
+}
+
+.service-options {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.service-option {
+  position: relative;
+  display: block !important;
+  margin: 0 !important;
+  cursor: pointer;
+}
+
+.service-option input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.service-option > span {
+  display: block;
+  min-height: 94px;
+  padding: 15px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: #0b1019;
+  transition: border-color .18s ease, background .18s ease, transform .18s ease;
+}
+
+.service-option strong {
+  display: block;
+  color: var(--text);
+  margin-bottom: 6px;
+}
+
+.service-option small {
+  display: block;
+  color: var(--muted);
+  line-height: 1.35;
+  font-weight: 500;
+}
+
+.service-option:hover > span {
+  transform: translateY(-2px);
+  border-color: rgba(86,224,255,.35);
+}
+
+.service-option input:checked + span {
+  border-color: var(--accent);
+  background: linear-gradient(145deg, rgba(86,224,255,.10), rgba(125,108,255,.07));
+  box-shadow: 0 0 0 1px rgba(86,224,255,.12), 0 0 24px rgba(86,224,255,.07);
+}
+
+.form-note {
+  margin: 12px 0 0;
+  color: var(--muted);
+  font-size: .78rem;
+  text-align: center;
+}
+
+@media (max-width: 560px) {
+  .service-options {
+    grid-template-columns: 1fr;
+  }
+
+  .service-option > span {
+    min-height: auto;
+  }
+}
+
+
+/* Updated Veytrix logo/header */
+.brand-image {
+  display: inline-flex;
+  align-items: center;
+}
+
+.header-logo {
+  display: block;
+  height: 68px;
+  width: auto;
+  max-width: min(420px, 58vw);
+  object-fit: contain;
+  filter: drop-shadow(0 0 18px rgba(86, 224, 255, 0.14));
+}
+
+.about-brand-mark {
+  display: block;
+  width: 84px;
+  height: auto;
+  margin: 0 0 18px;
+  filter: drop-shadow(0 0 24px rgba(86, 224, 255, 0.1));
+}
+
+.footer-brand-image {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.footer-brand-mark {
+  display: block;
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
+}
+
+.footer-brand-text {
+  letter-spacing: 0.16em;
+  font-weight: 800;
+  color: var(--text);
+  font-size: 0.92rem;
+}
+
+@media (max-width: 850px) {
+  .header-logo {
+    height: 56px;
+    max-width: min(320px, 52vw);
+  }
+}
+
+@media (max-width: 560px) {
+  .header-logo {
+    height: 46px;
+    max-width: 210px;
+  }
+
+  .about-brand-mark {
+    width: 70px;
+  }
+
+  .footer-brand-mark {
+    width: 38px;
+    height: 38px;
+  }
+
+  .footer-brand-text {
+    font-size: 0.82rem;
+    letter-spacing: 0.12em;
+  }
+}
+
+
+/* Local SEO section */
+.local-seo-section {
+  position: relative;
+}
+
+.local-seo-grid {
+  display: grid;
+  grid-template-columns: 1.05fr .95fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.local-area-card {
+  padding: 30px;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  background:
+    linear-gradient(145deg, rgba(86,224,255,.045), rgba(125,108,255,.025)),
+    var(--panel);
+  box-shadow: var(--shadow);
+}
+
+.local-area-card p {
+  color: var(--muted);
+  margin-bottom: 0;
+}
+
+.local-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 18px 0 22px;
+}
+
+.local-tags span {
+  padding: 8px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(86,224,255,.22);
+  background: rgba(86,224,255,.06);
+  color: #d7f8ff;
+  font-size: .82rem;
+  font-weight: 700;
+}
+
+@media (max-width: 850px) {
+  .local-seo-grid {
+    grid-template-columns: 1fr;
+    gap: 38px;
+  }
+}
+
+</style>
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Veytrix Digital",
+  "url": "https://veytrixdigital.com/",
+  "telephone": "+1-850-464-3359",
+  "email": "contact@veytrixdigital.com",
+  "founder": {
+    "@type": "Person",
+    "name": "Marc Earnest"
+  },
+  "areaServed": [
+    {
+      "@type": "AdministrativeArea",
+      "name": "Liberty County, Florida"
+    },
+    {
+      "@type": "City",
+      "name": "Bristol, Florida"
+    },
+    {
+      "@type": "City",
+      "name": "Blountstown, Florida"
+    },
+    {
+      "@type": "City",
+      "name": "Tallahassee, Florida"
+    },
+    {
+      "@type": "AdministrativeArea",
+      "name": "North Florida"
+    }
+  ],
+  "serviceType": [
+    "Website Design",
+    "Web Development",
+    "Android App Development",
+    "Custom Business Software",
+    "Digital Business Tools"
+  ],
+  "description": "Custom website design, Android app development, and practical digital tools for local businesses and entrepreneurs in Liberty County and surrounding North Florida communities."
+}
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="top-contact-bar">
+      <div class="container top-contact-inner">
+        <span>Marc Earnest</span>
+        <div class="top-contact-links">
+          <a href="tel:+18504643359">850-464-3359</a>
+          <a href="mailto:contact@veytrixdigital.com">contact@veytrixdigital.com</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="container nav-wrap">
+      <a class="brand brand-image" href="#home" aria-label="Veytrix Digital home">
+        <img src="logo-header.png" alt="Veytrix Digital logo" class="header-logo" />
+      </a>
+
+      <button class="menu-button" id="menuButton" aria-label="Open navigation menu">
+        ☰
+      </button>
+
+      <nav id="mainNav" class="main-nav">
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#about">About</a>
+        <a href="#local">Local</a>
+        <a href="#contact" class="nav-cta">Start a Project</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-glow hero-glow-one"></div>
+      <div class="hero-glow hero-glow-two"></div>
+      <div class="container hero-grid">
+        <div>
+          <div class="owner-chip">
+            <span class="owner-dot"></span>
+            Marc Earnest • Independent Developer
+          </div>
+          <p class="eyebrow">ANDROID APPS • CUSTOM WEBSITES</p>
+          <h1>I build digital tools for <span class="gradient-text">real-world businesses.</span></h1>
+          <p class="hero-copy">
+            Custom Android apps and modern websites designed around what your
+            business actually needs — without bloated templates or unnecessary complexity.
+          </p>
+
+          <div class="hero-actions">
+            <a class="button primary" href="#contact">Tell Me Your Idea</a>
+            <a class="button secondary" href="#portfolio">See My Work</a>
+          </div>
+
+          <div class="hero-points">
+            <span>✓ Custom builds</span>
+            <span>✓ Mobile-friendly</span>
+            <span>✓ Built around your workflow</span>
+          </div>
+        </div>
+
+        <div class="hero-card">
+          <div class="code-top">
+            <span></span><span></span><span></span>
+          </div>
+          <pre><code>&lt;project&gt;
+  idea: "your business"
+  platform: "android + web"
+  design: "custom"
+  goal: "save time + grow"
+&lt;/project&gt;</code></pre>
+          <div class="status-line">
+            <span class="status-dot"></span>
+            Ready to build
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="services">
+      <div class="container">
+        <p class="eyebrow">SERVICES</p>
+        <h2>What I can build</h2>
+        <p class="section-intro">
+          I focus on practical software and websites that solve real problems.
+        </p>
+
+        <div class="cards three">
+          <article class="card">
+            <div class="card-icon">📱</div>
+            <h3>Android Apps</h3>
+            <p>
+              Custom Android applications for businesses, crews, tools, tracking,
+              automation, and unique app ideas.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="card-icon">🌐</div>
+            <h3>Business Websites</h3>
+            <p>
+              Fast, modern websites for local businesses, contractors, service
+              companies, creators, and startups.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="card-icon">⚙️</div>
+            <h3>Custom Tools</h3>
+            <p>
+              Dashboards, calculators, forms, workflows, and software built around
+              how your business already operates.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt" id="portfolio">
+      <div class="container">
+        <p class="eyebrow">PORTFOLIO</p>
+        <h2>Current work</h2>
+
+        <div class="project">
+          <div class="project-copy">
+            <span class="project-label">ANDROID APP</span>
+            <h3>AsphaltPro</h3>
+            <p>
+              My first Android app project, created around real paving and asphalt
+              operations. The goal is to give crews practical digital tools instead
+              of forcing them into generic software.
+            </p>
+            <ul>
+              <li>Built from firsthand industry experience</li>
+              <li>Focused on field usability</li>
+              <li>Designed to grow with new paving tools and features</li>
+            </ul>
+          </div>
+
+          <div class="project-visual">
+            <div class="phone">
+              <div class="phone-screen">
+                <img src="asphaltpro.jpg" alt="AsphaltPro app screenshot" class="app-shot" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="portfolio-note">
+          <strong>More projects coming.</strong>
+          <p>
+            I’m actively building my portfolio. I’d rather show real work than fill
+            this page with fake client projects.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="container about-grid">
+        <div class="about-title">
+          <img src="logo-mark.png" alt="Veytrix Digital brand mark" class="about-brand-mark" />
+          <p class="eyebrow">ABOUT ME</p>
+          <h2>I'm Marc Earnest.</h2>
+          <div class="about-badge">Builder • Problem Solver • Developer</div>
+        </div>
+
+        <div class="about-card">
+          <p class="about-lead">
+            I come from a hands-on paving and construction background, where good tools
+            have to work in the real world — not just look good on a screen.
+          </p>
+          <p>
+            I got into software because I kept seeing problems that could be solved
+            better with the right app. That led me to build <strong>AsphaltPro</strong>,
+            my first Android app, around the kind of information and tools paving crews
+            actually use.
+          </p>
+          <p>
+            Since then, I’ve been learning and building more — from Android apps to
+            websites and custom business tools. I like taking an idea, figuring out how
+            it should work, and turning it into something useful, clean, and practical.
+          </p>
+
+          <div class="about-values">
+            <div><span>01</span><strong>Practical first</strong><small>Build what actually helps.</small></div>
+            <div><span>02</span><strong>Keep learning</strong><small>Every project gets better.</small></div>
+            <div><span>03</span><strong>Build it right</strong><small>Simple, useful, dependable.</small></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="section local-seo-section" id="local">
+      <div class="container local-seo-grid">
+        <div>
+          <p class="eyebrow">LOCAL SERVICE</p>
+          <h2>Website design and app development for North Florida businesses.</h2>
+          <p class="section-intro">
+            Veytrix Digital is based in Liberty County, Florida and works with local businesses,
+            contractors, service companies, entrepreneurs, and organizations that need a better
+            website, a custom Android app, or a practical digital tool built around the way they work.
+          </p>
+        </div>
+
+        <div class="local-area-card">
+          <h3>Areas I serve</h3>
+          <div class="local-tags">
+            <span>Liberty County</span>
+            <span>Bristol</span>
+            <span>Blountstown</span>
+            <span>Tallahassee</span>
+            <span>North Florida</span>
+            <span>Remote Projects</span>
+          </div>
+          <p>
+            Looking for a website designer, web developer, or Android app developer near you?
+            Veytrix Digital offers custom development with direct, personal communication from
+            idea through launch.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt" id="process">
+      <div class="container">
+        <p class="eyebrow">PROCESS</p>
+        <h2>How a project works</h2>
+
+        <div class="steps">
+          <div class="step">
+            <span>01</span>
+            <h3>Tell me the idea</h3>
+            <p>We figure out what you need, what problem it solves, and who will use it.</p>
+          </div>
+          <div class="step">
+            <span>02</span>
+            <h3>Plan the build</h3>
+            <p>I map out the features, layout, technology, and a clear path to completion.</p>
+          </div>
+          <div class="step">
+            <span>03</span>
+            <h3>Build & test</h3>
+            <p>The project is built, tested, adjusted, and checked across the devices it needs to support.</p>
+          </div>
+          <div class="step">
+            <span>04</span>
+            <h3>Launch</h3>
+            <p>Your app or website gets prepared for release, hosting, or deployment.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact-section" id="contact">
+      <div class="container contact-grid">
+        <div>
+          <p class="eyebrow">START A PROJECT</p>
+          <h2>Have an app or website idea?</h2>
+          <p class="section-intro">
+            Tell me what you want to build. Your project request will be sent directly
+            to Veytrix Digital at contact@veytrixdigital.com.
+          </p>
+
+          <div class="contact-details">
+            <a class="contact-item" href="tel:+18504643359">
+              <span class="contact-icon">☎</span>
+              <span><small>PHONE</small><strong>850-464-3359</strong></span>
+            </a>
+
+            <a class="contact-item" href="mailto:contact@veytrixdigital.com">
+              <span class="contact-icon">✉</span>
+              <span><small>EMAIL</small><strong>contact@veytrixdigital.com</strong></span>
+            </a>
+          </div>
+        </div>
+
+        <form
+          class="contact-form"
+          id="contactForm"
+          action="https://formsubmit.co/contact@veytrixdigital.com"
+          method="POST"
+        >
+          <input type="hidden" name="_subject" value="New Veytrix Digital Project Request" />
+          <input type="hidden" name="_template" value="table" />
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="hidden" name="_next" value="https://veytrixdigital.com/?submitted=1#contact" />
+          <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />
+          <label>
+            Your name
+            <input type="text" name="name" placeholder="John Smith" required />
+          </label>
+
+          <label>
+            Email
+            <input type="email" name="email" placeholder="you@example.com" required />
+            <input type="hidden" name="_replyto" value="" id="replyToField" />
+          </label>
+
+          <fieldset class="service-fieldset">
+            <legend>What do you need?</legend>
+
+            <div class="service-options">
+              <label class="service-option">
+                <input type="radio" name="service" value="Android App" required />
+                <span>
+                  <strong>📱 Android App</strong>
+                  <small>Custom Android application</small>
+                </span>
+              </label>
+
+              <label class="service-option">
+                <input type="radio" name="service" value="Website" />
+                <span>
+                  <strong>🌐 Website</strong>
+                  <small>Custom business website</small>
+                </span>
+              </label>
+
+              <label class="service-option">
+                <input type="radio" name="service" value="App + Website" />
+                <span>
+                  <strong>⚡ App + Website</strong>
+                  <small>A complete digital package</small>
+                </span>
+              </label>
+
+              <label class="service-option">
+                <input type="radio" name="service" value="Custom Business Tool" />
+                <span>
+                  <strong>⚙️ Custom Business Tool</strong>
+                  <small>Workflow, dashboard, calculator, or other tool</small>
+                </span>
+              </label>
+            </div>
+          </fieldset>
+
+          <label>
+            Tell me about the project
+            <textarea name="message" rows="6" placeholder="Describe what you want to build..." required></textarea>
+          </label>
+
+          <button class="button primary full" type="submit">Send Project Request</button>
+          <p class="form-note">Requests are sent to contact@veytrixdigital.com. First-time activation may require one confirmation email from FormSubmit.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-wrap">
+      <div>
+        <a class="brand footer-brand footer-brand-image" href="#home">
+          <img src="logo-mark.png" alt="Veytrix Digital brand mark" class="footer-brand-mark" />
+          <span class="footer-brand-text">VEYTRIX DIGITAL</span>
+        </a>
+        <p>Android apps. Websites. Custom digital tools.</p>
+        <p><a href="tel:+18504643359">850-464-3359</a> • <a href="mailto:contact@veytrixdigital.com">contact@veytrixdigital.com</a></p>
+      </div>
+      <p>© <span id="year"></span> Veytrix Digital. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+const menuButton = document.getElementById("menuButton");
+const mainNav = document.getElementById("mainNav");
+const year = document.getElementById("year");
+
+menuButton.addEventListener("click", () => {
+  mainNav.classList.toggle("open");
+});
+
+document.querySelectorAll(".main-nav a").forEach((link) => {
+  link.addEventListener("click", () => {
+    mainNav.classList.remove("open");
+  });
+});
+
+year.textContent = new Date().getFullYear();
+
+
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.getElementById("contactForm");
+  const emailInput = form ? form.querySelector('input[name="email"]') : null;
+  const replyTo = document.getElementById("replyToField");
+
+  if (form && emailInput && replyTo) {
+    form.addEventListener("submit", function () {
+      replyTo.value = emailInput.value;
+    });
+  }
+
+  const params = new URLSearchParams(window.location.search);
+  if (params.get("submitted") === "1") {
+    const note = document.querySelector("#contact .form-note");
+    if (note) {
+      note.textContent = "Project request submitted. Thank you — Veytrix Digital will review it shortly.";
+      note.style.color = "var(--accent)";
+      note.style.fontWeight = "700";
+    }
+  }
+});
+</script>
+
+</body>
+</html>
